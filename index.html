@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PL calculadora</title>
+    <title>Powerlevel Calculator</title>
+    <meta property="og:site_name" content="PeiServer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zohdev.github.io/PLCalculator/">
+    <meta property="og:title" content="God Hawk">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1081384432419741738/1283666617917509703/cG5n.png?ex=66e3d333&is=66e281b3&hm=db586ef06a9b658adc92d25112657da09043a223cdbc317039c6b2794deb38f8&">
+    <meta property="og:description" content="Powerlevel para Joules!">
 </head>
 <body>
-    <h1>Calculadora de PL</h1>
-    <p>Desc é o maluco dos poderes de luta!</p>
-    <button id="meuBotao">Clique aqui e você vai para um isekai!</button>
+    <h1>Powerlevel Calculator</h1>
+    
+    <div style="width:300px;">
+        <input type="radio" id="anime" name="what" value="anime" onchange="Testy()" checked="">
+        <label for="anime">Anime</label>
+        <input type="radio" id="manga" name="what" value="manga" onchange="Testy()">
+        <label for="manga">Manga</label>
+        <div align="right">
+            <p>Powerlevel: <input name="searchTxt" type="number" maxlength="512" min="0" onchange="Testytest()" id="searchTxt" class="searchField" placeholder="5"></p>
+            <p>Joules: <input name="resultTxt" type="number" onchange="Testytest2()" id="resultTxt" placeholder="1.000e+2"></p>
+            <p>Attack Potency: <input name="tierTxt" type="text" id="tierTxt" placeholder="Human Level" disabled=""></p>
+        </div>
+    </div>
 
     <!-- Conectar com o JavaScript -->
     <script src="script.js"></script>
