@@ -117,6 +117,6 @@ function Testytest2() {
         else {chon = (joules + 3.49836087509182289609426021314985984e+36) / 1.3785997667759417203128790455156736e+31;}
     }
 
-    document.getElementById("searchTxt").value = chon.toFixed(8); // Exibir o valor real com precisão
+    document.getElementById("searchTxt").value = parseFloat(chon).toFixed(2);
     TierManager(joules);
 }
