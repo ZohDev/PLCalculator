@@ -1,6 +1,6 @@
 var chon = document.getElementById("searchTxt").value;
 
-var lastchanged = 1; // Apenas em caso de alguém reclamar de algo
+var lastchanged = 1; 
 function Testy(){
     if(lastchanged == 1){Testytest();}
     if(lastchanged == 2){Testytest2();}
@@ -38,7 +38,7 @@ function Testytest() {
 
     TierManager(joules);
 
-    document.getElementById("resultTxt").value = joules.toExponential(3);
+    document.getElementById("resultTxt").value = joules.toExponential(); // Para mostrar o valor completo sem arredondar
     if(chon > 10000000000000000000){
         document.getElementById("searchTxt").value = chon.toExponential(3);
     }
@@ -112,11 +112,11 @@ function Testytest2() {
         if(joules < 8.368*10**9){chon = Math.log(joules / 0.000001195) / Math.log(38.4170784359)} 
         else if(joules < 1.810*10**30){chon = Math.log(joules / 532649904.7301444) / Math.log(1.317097671)} 
         else if(joules < 1.000000*10**31){chon = Math.log(joules / (1.62441517*10**30)) / Math.log(1.000601175)} 
-        else if(joules < 1.000000*10**34){chon = (joules-187392558139534887408670882136064)/(1445930232558139657815064576)} 
+        else if(joules < 1.000000*10**34){chon = (joules - 1.87392558139534887408670882136064e+31) / 1.445930232558139657815064576e+24; } 
         else if(joules < 6.322000*10**42){chon = Math.log(joules / (8.7400757*10**28)) / Math.log(1.000047453)} 
-        else {chon = (joules+349836087509182289609426021314985984)/(13785997667759417203128790455156736)}
+        else {chon = (joules + 3.49836087509182289609426021314985984e+36) / 1.3785997667759417203128790455156736e+31;}
     }
 
-    document.getElementById("searchTxt").value = Math.ceil(chon);
+    document.getElementById("searchTxt").value = chon.toFixed(8); // Exibir o valor real com precisão
     TierManager(joules);
 }
